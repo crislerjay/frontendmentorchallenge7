@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/lightbox.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="header">
+      <div class="leftContent">
+        <div id="burger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h1 class="logo"><img src="/images/logo.svg" alt=""></h1>
+      </div>
+      <div class="rightContent">
+        <p class="cart" onclick="openCart()"><img src="/images/icon-cart.svg" alt=""></p>
+        <p class="profile"><img src="/images/image-avatar.png" alt=""></p>
+      </div>
+    </div>
+    <div class="collections">
+      <div class="collectionsSP">
+        <p class="btn prev" onclick="slideImage('prev')"></p>
+        <a class="sp-image-link" href="/images/image-product-1.jpg" data-lightbox="sp-set"><img src="/images/image-product-1.jpg" alt="" /></a>
+        <p class="btn next" onclick="slideImage('next')"></p>
+      </div>
+      <div class="detailsBlk">
+        <p class="sub">Sneaker Company</p>
+        <p class="title">Fall Limited Edition Sneakers</p>
+        <p class="desc">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="priceBlk">
+          <p class="currentPrice">
+            $125.00
+            <span>50%</span>
+          </p>
+          <p class="oldPrice">$250.00</p>
+        </div>
+        <div class="quantityOption">
+          <p class="decrease" onclick="decreaseQuantity()"><img src="/images/icon-minus.svg" alt=""></p>
+          <p class="quantity">1</p>
+          <p class="increase" onclick="increaseQuantity()"><img src="/images/icon-plus.svg" alt=""></p>
+        </div>
+        <p class="btn01 btnAddToCart" onclick="addToCart()">Add to Cart</p>
+      </div>
+    </div>
+
+    <div class="cartModal">
+      <p class="cartTitle">Cart</p>
+      <div class="cartContent">
+        <p class="txt">Your cart is empty</p>
+        <!-- <div class="item">
+          <p class="img"><img src="/images/image-product-1.jpg" alt=""></p>
+          <div class="details">
+            <p class="title">Fall Limited Edition Sneakers</p>
+            <p class="price">
+              <span class="txt">$125.00 x 3</span>
+              <span class="sum">$375.00</span>
+            </p>
+          </div>
+          <p class="btnDelete"><img src="/images/icon-delete.svg" alt=""></p>
+        </div>
+        <p class="btn01 btnCheckout">Checkout</p> -->
+      </div>
+      <p class="btn01 btnCheckout">Checkout</p>
+    </div>
+  </div>
+
+
+  
+  <script src="/js/lightbox.js"></script>
+  <script src="/js/script.js"></script>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
